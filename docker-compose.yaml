@@ -1,0 +1,12 @@
+app:
+  build: .
+  ports: 
+    - "5000:5000"
+  links:
+    - redis
+  volumes:
+    - "./app:/go/src/app"
+  tty: true
+
+redis:
+  image: redis
