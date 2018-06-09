@@ -9,5 +9,6 @@ func main() {
   router := gin.Default()
 
   router.GET("/", controller.IndexGet)
+  router.POST("/", controller.UserPost)
   router.Run(":5000")
 }
